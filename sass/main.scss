@@ -118,6 +118,7 @@ body{
 }
 
 .about-us{
+    scroll-margin-top: 84px;
     &__heading{
         @include sectHeading;
     }
@@ -150,7 +151,8 @@ body{
 }
 
 .offer{
-    @include bgImg("../img/hero-1-small.jpg");
+    @include bgImg("../img/hero-2-small.jpg");
+    scroll-margin-top: 84px;
     height: 800px;
     position: relative;
     &__bg{
@@ -212,6 +214,7 @@ body{
 }
 
 .contact{
+    scroll-margin-top: 84px;
     padding: 40px 0;
     width: 100%;
     display: flex;

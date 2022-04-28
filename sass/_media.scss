@@ -26,6 +26,9 @@
     div.header__body{
         @include bgImg("../img/hero-1-big.jpg");
     }
+    section.offer{
+        background-image: url("../img/hero-2-big.jpg");
+    }
 }
 
 @media (max-width: 1200px){
@@ -56,8 +59,19 @@
 
 @media (min-width: 450px){
     .offer{
-        @include bgImg("../img/hero-1-small.jpg");
+        @include bgImg("../img/hero-2-small.jpg");
         height: 800px;
+        h2.offer__heading{
+            width: 100%;
+            display: block;
+            max-width: 900px;
+            // margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            top: 20px;
+            z-index: 8;
+        }
         div.offer__bg{
             position: relative;
             height: 800px;

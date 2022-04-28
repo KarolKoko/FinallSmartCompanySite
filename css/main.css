@@ -51,6 +51,9 @@ body {
     background-position: center;
     background-size: cover;
   }
+  section.offer {
+    background-image: url("../img/hero-2-big.jpg");
+  }
 }
 
 @media (max-width: 1200px) {
@@ -85,10 +88,20 @@ body {
 
 @media (min-width: 450px) {
   .offer {
-    background-image: url("../img/hero-1-small.jpg");
+    background-image: url("../img/hero-2-small.jpg");
     background-position: center;
     background-size: cover;
     height: 800px;
+  }
+  .offer h2.offer__heading {
+    width: 100%;
+    display: block;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 20px;
+    z-index: 8;
   }
   .offer div.offer__bg {
     position: relative;
@@ -247,6 +260,10 @@ body {
   color: #FF914D;
 }
 
+.about-us {
+  scroll-margin-top: 84px;
+}
+
 .about-us__heading {
   font-size: 2.6rem;
   text-transform: uppercase;
@@ -285,9 +302,10 @@ body {
 }
 
 .offer {
-  background-image: url("../img/hero-1-small.jpg");
+  background-image: url("../img/hero-2-small.jpg");
   background-position: center;
   background-size: cover;
+  scroll-margin-top: 84px;
   height: 800px;
   position: relative;
 }
@@ -391,6 +409,7 @@ body {
 }
 
 .contact {
+  scroll-margin-top: 84px;
   padding: 40px 0;
   width: 100%;
   display: -webkit-box;

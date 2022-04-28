@@ -70,3 +70,4 @@ function scrollFn(){
 document.addEventListener("scroll", scrollFn)
 menuBtn.addEventListener("click", openMenuFn)
 window.addEventListener("resize", resizeFn)
+window.addEventListener("resize", scrollFn)
