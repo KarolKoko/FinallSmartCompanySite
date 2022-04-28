@@ -1,0 +1,350 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.6rem;
+}
+
+
+@import "./colors";
+@import "./mixins";
+@import "./media";
+
+.space-one{
+    position: absolute;
+    width: 100%;
+    height: 35px;
+    background-color: $pure-white;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    bottom: 0;
+}
+
+.space-two{
+    position: absolute;
+    width: 100%;
+    height: 35px;
+    background-color: $pure-white;
+    clip-path: polygon(100% 100%, 0 0, 100% 0);
+    top: 0;
+}
+
+.space-three{
+    position: absolute;
+    width: 100%;
+    height: 35px;
+    background-color: $pure-white;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    bottom: 0;
+}
+
+.wrapper{
+    max-width: 930px;
+    margin: 0 auto;
+}
+
+.wrapper-smaller{
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.dark-nav{
+    background-color: rgb(43, 43, 43) !important;
+    button{
+        i{
+            color: $pure-white;
+        }
+    }
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    &__nav{
+        position: fixed;
+        @include flexrEndCenter;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 50vw;
+        max-width: 200px;
+        max-height: 200px;
+        padding-top: 20px;
+        clip-path: circle(71.5% at 76% 27%);
+        background-color: $pure-white;
+        border-bottom: 3px solid $brand-color;
+        z-index: 10;
+        transition: background-color .3s;
+    }
+    &__btn{
+        padding: 20px;
+        @include btnStyle;
+        margin-top: 20px;
+        font-size: 3rem;
+        cursor: pointer;
+    }
+    &__img{
+        width: 80%;
+    }
+    &__body{
+        @include bgImg("../img/hero-1-small.jpg");
+    }
+    &__bg{
+        position: relative;
+        height: 100vh;
+        @include flexCenter;
+        background-color: $scnd-bg-color;
+    }
+    &__heading{
+        text-align: center;
+        color: $pure-white;
+        margin: 20px;
+        font-size: 3.2rem;
+    }
+    &__highlighted-span{
+        color: $brand-color;
+    }
+}
+
+.about-us{
+    &__heading{
+        @include sectHeading;
+    }
+    &__text{
+        text-align: center;
+        margin: 50px;
+        position: relative;
+        font-size: 2rem;
+    }
+    &__text::after{
+        content: '';
+        border-top: 3px solid $brand-color;
+        width: 40%;
+        height: 3px;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    &__text::before{
+        content: '';
+        border-top: 3px solid $brand-color;
+        width: 40%;
+        height: 3px;
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+
+.offer{
+    @include bgImg("../img/hero-1-small.jpg");
+    height: 800px;
+    position: relative;
+    &__bg{
+        height: 800px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column
+    }
+    &__circle-1{
+        @include circle;
+        width: 85%;
+        height: 85vw;
+        @include flexCenter;
+        flex-direction: column;
+    }
+    &__circle-2{
+        @include circle;
+        width: 85%;
+        height: 85vw;
+        @include flexCenter;
+        flex-direction: column;
+    }
+    //? OFFER COMPONENTS
+    //? logo
+    &__logo{
+        width: 70%;
+    }
+    //? text
+    &__text{
+        text-align: center;
+        width: 80%;
+        &--cloud{
+            font-size: 1.3rem;
+        }
+    }
+    //? btn
+    &__btn{
+        background: none;
+        border: 2px solid $brand-color;
+        padding: 10px 20px;
+        margin-top: 10px;
+        border-radius: 8px;
+        color: #af4f14;
+    }
+    &__heading{
+        @include sectHeading;
+        position: absolute;
+        color: $pure-white;
+    }
+    &__scnd-bg{
+        background-color: $scnd-bg-color;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 800px; 
+    }
+}
+
+.contact{
+    padding: 40px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    &__heading{
+        @include sectHeading;
+    }
+    &__container{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 30px;
+    }
+    &__phone-nr, &__mail{
+        display: flex;
+    }
+    &__date{
+        margin-left: 10px;
+        text-align: center;
+    }
+}
+
+.footer{
+    background-color: $gray;
+    padding: 20px;
+    &__text{
+        margin-left: 10px;
+    }
+}
+
+
+
+
+
+
+
+// ----------------- Nav Styles -----------------
+
+.hide{
+    display: none;
+}
+
+.sm{
+    position: fixed;
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+    background-color: $gray;
+    padding-top: 200px;
+    z-index: 9;
+    animation-name: sm-intro;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    a{
+        display: block;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+        color: $pure-white;
+        font-size: 3rem;
+    }
+}
+
+.md{
+    position: fixed;
+    display: inline-block;
+    width: 150px;
+    height: 450px;
+    background-color: $gray;
+    padding-top: 200px;
+    z-index: 9;
+    right: 0;
+    animation-name: square-intro;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    border-bottom: 3px solid $brand-color;
+    border-left: 3px solid $brand-color;
+    a{
+        display: block;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+        color: $pure-white;
+        font-size: 3rem;
+    }
+}
+
+.lg{
+    position: fixed;
+    display: inline-block;
+    width: 454px;
+    height: 62px;
+    background-color: $gray;
+    z-index: 11;
+    top: 84px;
+    left: 50%;
+    transform: translate(-50%);
+    border: 3px solid $brand-color;
+    border-top: none;
+    animation-name: square-intro;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    a{
+        display: inline-block;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+        color: $dark;
+        font-size: 3rem;
+    }
+}
+
+// ----------------- Keyframes -----------------
+
+@keyframes sm-intro {
+    0%{
+        clip-path: circle(10.1% at 100% 0);
+    }
+    100%{
+        clip-path: circle(141.4% at 100% 0);
+    }
+}
+
+@keyframes square-intro {
+    0%{
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    100%{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}

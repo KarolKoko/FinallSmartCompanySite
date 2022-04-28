@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Company</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="hide" id="navItems">
+        <a href="#" class="item">home</a>
+        <a href="#" class="item">o nas</a>
+        <a href="#" class="item">oferta</a>
+        <a href="#" class="item">kontakt</a>
+    </div>
+    <header class="header">
+        <nav class="header__nav" id="headerNav">
+            <img src="./img/smart-company-logo.png" class="header__img" alt="Logo firmy Smart Company">
+            <button class="header__btn" id="menuBtn"><i class="bi bi-list header__btn__icon"></i></button>
+        </nav>
+        <div class="header__body">
+            <div class="header__bg">
+                <h1 class="header__heading"><span class="header__highlighted-span">Smart</span> Company - Rozwiązania IT dla biznesu</h1>
+                <div class="space-one"></div>
+            </div>
+        </div>
+    </header>
+    <div id="allEl">
+        <main>
+            <section class="about-us wrapper">
+                <h2 class="about-us__heading">o nas</h2>
+                <p class="about-us__text">Jesteśmy firmą z powołania, to co robimy, robimy jaknajlepiej, a przedewszystkim z pasją. W 2019 roku, 
+                    zapadła decyzja o stworzeniu Smart Company. Wtedy też ustanowiliśmy sobie cel: Każdy projekt, który wyjdzie 
+                    spod naszej myszki i klawiatury, ma  być wykonany porządnie i profesjonalnie, a klient ma mieć poczucie 
+                    jakości i dobrze wydanego pieniądza. Oferujemy usługi informatyczne dla firm, dbamy o sprzęt i wdrażamy 
+                    rozwiązania chmurowe.
+                </p>
+            </section>
+            <section class="offer">
+                <div class="offer__scnd-bg"></div>
+                <div class="space-two"></div>
+                <h2 class="offer__heading">oferta</h2>
+                <div class="offer__bg wrapper-smaller">
+                    <div class="offer__circle-1">
+                        <img src="./img/smart-it-logo.png" class="offer__logo offer__logo--it" alt="Logo firmy Smart IT">
+                        <p class="offer__text offer__text--it">
+                            Wsparcie informatyczne firm, 
+                            naprawianie sprzętu jak i 
+                            oprogramowania.
+                        </p>
+                        <button class="offer__btn">Więcej</button>
+                    </div>
+                    <div class="offer__circle-2">
+                        <img src="./img/smart-cloud-logo.png" class="offer__logo offer__logo--cloud" alt="Logo firmy Smart Cloud">
+                        <p class="offer__text offer__text--cloud">
+                            Analiza potrzeb, projektowanie, 
+                            wdrażanie rozwiązań chmurowych. 
+                            Office 365, Azure, Amazon Wen Services.
+                        </p>
+                        <button class="offer__btn">Więcej</button>
+                    </div>
+                </div>
+                <div class="space-three"></div>
+            </section>
+            <section class="contact wrapper">
+                <h2 class="contact__heading">kontakt</h2>
+                <div class="contact__container">
+                    <div class="contact__phone-nr">
+                        <i class="bi bi-telephone-fill"></i><p class="contact__date">+48 608 389 468</p>
+                    </div>
+                    <div class="contact__mail">
+                        <i class="bi bi-envelope-fill"></i><p class="contact__date">a.kokosza@smart-company.pl</p>
+                    </div>
+                </div>
+                <i class="bi bi-geo-alt-fill"></i>
+                <p class="contact__date">
+                    ul. Bażantów 14E/9<br>
+                    Katowice 40-668
+                </p>
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="footer__text">&copy; 2022 Smart Company | Kajko Projects</p>
+        </footer>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
