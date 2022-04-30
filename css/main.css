@@ -390,6 +390,7 @@ body {
   margin-top: 10px;
   border-radius: 8px;
   color: #af4f14;
+  cursor: pointer;
 }
 
 .offer__heading {
